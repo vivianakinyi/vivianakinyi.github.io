@@ -5,6 +5,8 @@
 </head>
 <body>
 	<h1>Summary of HTML5 For Designers by Jeremy Keith</h1>
+    <br />
+    <hr>
 	<section>
 		<section>
 			<header><h2>Chapter 1: A brief History of Markup</h2></header>
@@ -90,19 +92,21 @@
 		</section>
 
 		<section>
-			<header><h1>Chapter 4: Web Forms</h1></header>
+			<header><h2>Chapter 4: Web Forms</h2></header>
 				<p>HTML5 has migrated from from scripted to declarative solutions. This specification introduces many new form enhancements.We look at some examples of HTML5 forms.</p>
 
-				<h4>Placholders</h4>
+				<p><strong>Placeholders</strong> are used a when form field has no value. However some browsers do not support it yet hence need to use Javascript to check. Example: </p>
 				<label for="email">Email</label>
 					<input id="email" name="email" type="text" »
 					placeholder="example@info.com">
 
 				<h4>Autofocus</h4>
+                <ul><li>Automatically focus one particular form field when a document is loaded. Example: </li></ul>
 				<label for="status">What's happening?</label>
 				<input id="status" name="status" type="text" autofocus>
 
 				<h4>Validation</h4>
+                <ul><li>Using <em>required</em> attribute to prevent form submissions if required fields has not been filled out. Example: </li></ul>
 					<label for="pass">Your password (* required)</label>
 					<input id="pass" name="pass" type="password" required>
 
@@ -110,41 +114,51 @@
 					<input id="zip" name="zip" pattern="[\d]{5}(-[\d]{4})">
 
 				<h4>Datalist</h4>
-				<label for="homeworld">Your home planet</label>
-					<input type="text" name="homeworld" id="homeworld" list="planets">
-					<datalist id="planets">
-						<option value="Mercury">
-						<option value="Venus">
-						<option value="Earth">
-						<option value="Mars">
-						<option value="Jupiter">
-						<option value="Saturn">
-						<option value="Uranus">
-						<option value="Neptune">
+                <ul><li>The new datalist element allows you to crossbreed a regular input element with a select element by providing options to alist. Example:</li></ul>
+				<label for="counties" >Counties</label>
+					<input type="text" name="county" id="county" list="counties" placeholder = "Type county to search">
+					<datalist id="counties">
+						<option value="Murang'a">
+                        <option value="Kericho">
+                        <option value="Bomet">
+                        <option value="Nairobi">
+                        <option value="Kilifi">
+                        <option value="Kitale">
+                    
 					</datalist>
+                    <h3>Input Types</h3>
+                    <ul><li>Note that not all input types in HTML5 are supported supported by all browers yet hence will fall back to displaying a regular text input.</li>
+                    <li>The new input types allow browsers to display native controls suited to the expected input data, and to validate the value entered</li>
+                    <li>One downside to the new input types is that they do not have default styling yet.</li>
+                    <li>Examples: </li>
+                    </ul>
+                    <article>
+        				<h4>Slider with type="range"</h4>
+                            <label for="amount">How much?</label>
+        					<input id="amount" name="amount" type="range">	
 
-				<h4>Slide with type="range"</h4>
-					<label for="amount">How much?</label>
-					<input id="amount" name="amount" type="range">	
-				<h4>Spinners with type = number</p>
-					<label for="amount">How much?</label>
-					<input id="amount" name="amount" type="number" »
-					min="5" max="20">
+        				<h4>Spinners with type = "number"</h4>
+        					<label for="amount">How much?</label>
+        					<input id="amount" name="amount" type="number" »
+        					min="5" max="20">
 
-				<h4>Date and time (Not yet implemented in Firefox)</h4>
-					<label for="dtstart">Start date</label>
-					<input id="dtstart" name="dtstart" type="date">
-
+        				<h4>Date and time (Not yet implemented in Firefox)</h4>
+        					<label for="dtstart">Start date</label>
+        					<input id="dtstart" name="dtstart" type="date">
+                    </article>
 					</section>
 
 					<section>
-						<header><h1>Chapter 5: Semantics</h1></header>
-							<h2>Extensibiliity</h2>
+						<header>
+                            <h2>Chapter 5: Semantics</h2>
+                        </header>
+							<h3>Extensibiliity</h3>
                             <p>Extensibility is about adding more semantic value to elements using the class attribute. This class attribut can be used by browers if they follow the agreed conventions.</p>
 
-                            <h2>Microformats</h2>
+                            <h3>Microformats</h3>
                             <p>Microformats are a set of conventions which are agreed upon by a community.They are used with classes to extend the HTML5 attributes. However, they are limited by design. They solve 80% of the use cases with 20% of the effort.</p>
-							<p>Mark- this is used to highlight a search item. For example</p>
+							<ul>
+                            <li><em>Mark</em> this is used to highlight a search item. For example</li>
 								<p>Search results for 'unicorn'</p>
 								<ol>
 								<li><a href="http://clearleft.com/">
@@ -153,7 +167,7 @@
 								</a></li>
 								</ol>
 
-							<p><em>Meter</em</p>
+							<li><em>Meter</em> marks up measurements which have a scale of min and max.</li>
 								<meter>9 out of 10 cats</meter>
 
 								<meter max="10">9 cats</meter>
@@ -162,23 +176,31 @@
 								It's quite warm for this time of year.
 								</meter>
 
-							<p><em>Progress</em> This is </p>
+							<li><em>Progress</em> marks up a value that is in the process of changing.
+                            <p>This is 
 								Your profile is <progress>60%</progress> complete.
-							<progress min="0" max="100" value="60"></progress>
-							<h1>Structure</h1>
-							<p></p>
-								<section>
-								 	<h1>DOM Scripting</h1>
-									<p>The book is aimed at designers »
-									rather than programmers.</p>
-									<p>By Jeremy Keith</p>
-								</section>
+							<progress min="0" max="100" value="60"></progress></p>
+                            </li></ul>
+
+							<h3>Structure</h3>
+							<ul>
+                                <li>HTML5 introduces new structural elements that includes:</li>
+                                    <ul>
+                                        <li>section</li>
+                                        <li>header</li>
+                                        <li>footer</li>
+                                        <li>aside</li>
+                                        <li>nav</li>
+                                        <li>article</li>
+                                    </ul>
+                                <li>Caution: Do not replace the new structural element without first thinking of the content.</li>
+                            </ul>
 
 					</section>
 
 					<section>
-						<header><h1>Chapter 6: Using HTML5 Today<h1></header>
-                        <ol>
+						<header><h2>Chapter 6: Using HTML5 Today<h2></header>
+                        <ul>
                             <li>Today, not all element in HTML5 are supported by all browsers. However, this does not hinder someone from using them</li>
                             <li>Browsers don't support default styling for most of the elemnts.</li>
                             <li>Browsers are also yet to support heading levels of HTML5’s new outline algorithm but are still available for use..</li>
@@ -186,18 +208,19 @@
                             <li><em>Validation </em> is a powerful tool but needs to be used wisely.</li>
                             <li>Some <em>featur detection</em> sites can be used to determine if a feature is supported by your browser.For example:</li>
                             <a>
-                                <ol>
+                                <ul>
                                     <li>http://www.html5rocks.com/en/</li>
                                     <li>http://html5test.com/</li>
                                     <li>http://caniuse.com/</li>
-                                </ol>
-                        </ol></a>
+                                </ul>
+                        </ul></a>
 
 							<p></p>
 
 					</section>
 
 	</section>
+    <br /><hr>
 <footer>Designed by vivian</footer>
 </body>
 </html>
