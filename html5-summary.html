@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML5 Summary</title>
+</head>
+<body>
+	<h1>Summary of HTML5 For Designers by Jeremy Keith</h1>
+	<section>
+		<section>
+			<header><h2>Chapter 1: A brief History of Markup</h2></header>
+				<article>
+					<p>HTML5 was formed by a bunch of rebels from the W3C who formed 
+					Hypertext Application Technology Working Group,(WHATWG).HTML5 replaced XHTML which is now almost dead.
+					</p>
+					<p>The expected timeline for HTML5 to become a proposed recommendation is said to be 2022. This of course raised outrage from web designers.However the date is actually not important as we can start using parts of the specification as web browsers support those features.</p>
+				</article>
+				
+
+		</section>
+
+		<section>
+			<header><h2>Chapter 2: The Design of HTML5</h2></header>
+				<article>
+					<h3>The design principles</h3>
+						<p>These are key principles that guide the development of the HTML5 development</p>
+						<ol>
+							<li>Support existing content i.e no Year Zero for HTML5.</li>
+							<li>Backward Compatibility</li>
+							<li>Keep it simple.</li>
+							<li>Don't reinvent the wheel.</li>
+							<li>Pave the cowpaths i.e If it aint broke don't fix it.</li>
+							<li>Priority of constituencies i.e In case of conflict, consider users over authors over implementers over specifiers over theoretical purity</li>
+						</ol>
+
+				</article>
+				
+		</section>
+
+		<section>
+			<header><h2>Chapter 3: Rich Media</h2></header>
+				<article>
+					<p>HTML5 fills in the holes when in comes to media since it does not require plugins as flash instead the rich media elements in HTML5 are native to the browser. We look at some of the rich media in HTML5</p>
+					<h3>Canvas</h3>
+						<p>The <mark>canvas</mark> element is an environment for creating dynamic images.The real power of canvas is that its contents can be updated at any moment, drawing new content based on the actions of the user. This ability to respond to user-triggered events makes it possible to create tools and games that would have previously required a plug-in technology such as Flash.</p>
+					<h3>Audio</h3>
+						<p>With HTML5 one can be able to embed an audio. It is very simple to do that. You can also be able to have autoplay, buffering which can all be turned on or off. How cool!
+						</p>
+						<h5>Audio Example with buttons</h5>
+						<audio id="player" src="witchitalineman.mp3">
+						</audio>
+						<div>
+							<button »
+								onclick="document.getElementById('player').play()"> 
+								Play
+							</button>
+							<button »
+								onclick="document.getElementById('player').pause()"> 
+								Pause
+							</button>
+							<button »
+								onclick="document.getElementById('player').volume »
+								+= 0.1">
+								Volume Up
+							</button>
+							<button »
+								onclick="document.getElementById('player').volume »
+								-= 0.1">
+								Volume Down
+							</button>
+		
+						</div>
+
+
+					<h3>Video</h3>
+						<p>Similar to audio. Only differnce is the poster placeholder. This is still not very widely supported though.</p>
+
+						<h5>Video Example</h5>
+								<video controls width="360" height="240" »poster="placeholder.jpg">
+								<source src="movie.ogv" type="video/ogg">
+								<source src="movie.mp4" type="video/mp4">
+								<object type="application/x-shockwave-flash" »
+								width="360" height="240" »
+								data="player.swf?file=movie.mp4">
+								<param name="movie" » value="player.swf?file=movie.mp4">
+								<a href="movie.mp4">Download the movie</a>
+								</object>
+							</video>
+				</article>
+				
+		</section>
+
+		<section>
+			<header><h1>Chapter 4: Web Forms</h1></header>
+				<p>HTML5 has migrated from from scripted to declarative solutions. This specification introduces many new form enhancements.We look at some examples of HTML5 forms.</p>
+
+				<h4>Placholders</h4>
+				<label for="email">Email</label>
+					<input id="email" name="email" type="text" »
+					placeholder="example@info.com">
+
+				<h4>Autofocus</h4>
+				<label for="status">What's happening?</label>
+				<input id="status" name="status" type="text" autofocus>
+
+				<h4>Validation</h4>
+					<label for="pass">Your password (* required)</label>
+					<input id="pass" name="pass" type="password" required>
+
+					<label for="zip">Phone number</label>
+					<input id="zip" name="zip" pattern="[\d]{5}(-[\d]{4})">
+
+				<h4>Datalist</h4>
+				<label for="homeworld">Your home planet</label>
+					<input type="text" name="homeworld" id="homeworld" list="planets">
+					<datalist id="planets">
+						<option value="Mercury">
+						<option value="Venus">
+						<option value="Earth">
+						<option value="Mars">
+						<option value="Jupiter">
+						<option value="Saturn">
+						<option value="Uranus">
+						<option value="Neptune">
+					</datalist>
+
+				<h4>Slide with type="range"</h4>
+					<label for="amount">How much?</label>
+					<input id="amount" name="amount" type="range">	
+				<h4>Spinners with type = number</p>
+					<label for="amount">How much?</label>
+					<input id="amount" name="amount" type="number" »
+					min="5" max="20">
+
+				<h4>Date and time (Not yet implemented in Firefox)</h4>
+					<label for="dtstart">Start date</label>
+					<input id="dtstart" name="dtstart" type="date">
+
+					</section>
+
+					<section>
+						<header><h1>Chapter 5: Semantics</h1></header>
+							<h1>Extensibiliity</h1>
+							<p>mark</p>
+								<p>Search results for 'unicorn'</p>
+								<ol>
+								<li><a href="http://clearleft.com/">
+									Riding the UX <mark>unicorn</mark> across »
+									the rainbow of the web.
+								</a></li>
+								</ol>
+
+							<p>Meter</p>
+								<meter>9 out of 10 cats</meter>
+								<meter max="10">9 cats</meter>
+								<meter low="-273" high="100" min="12" max="30" »
+								optimum="21" value="25">
+								It's quite warm for this time of year.
+								</meter>
+
+							<p>Progress</p>
+								Your profile is <progress>60%</progress> complete.
+							<progress min="0" max="100" value="60"></progress>
+							<h1>Structure</h1>
+							<p></p>
+								<section>
+								 	<h1>DOM Scripting</h1>
+									<p>The book is aimed at designers »
+									rather than programmers.</p>
+									<p>By Jeremy Keith</p>
+								</section>
+
+					</section>
+
+					<section>
+						<header>Chapter 6: Using HTML5 Today</header>
+							<p></p>
+
+					</section>
+
+	</section>
+<footer>Designed by vivian</footer>
+</body>
+</html>

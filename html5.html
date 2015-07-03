@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML5 for Web Designers</title>
+</head>
+<body>
+	
+	<p>Audio Example</p>
+	<audio id="player" src="witchitalineman.mp3">
+	</audio>
+	<div>
+		<button »
+			onclick="document.getElementById('player').play()"> »
+			Play
+		</button>
+		<button »
+			onclick="document.getElementById('player').pause()"> »
+			Pause
+		</button>
+		<button »
+			onclick="document.getElementById('player').volume »
+			+= 0.1">
+			Volume Up
+		</button>
+		<button »
+			onclick="document.getElementById('player').volume »
+			-= 0.1">
+			Volume Down
+		</button>
+		
+	</div>
+
+	<h1>Video Example</h1>
+		<video controls width="360" height="240" »
+		poster="placeholder.jpg">
+		<source src="movie.ogv" type="video/ogg">
+		<source src="movie.mp4" type="video/mp4">
+		<object type="application/x-shockwave-flash" »
+		width="360" height="240" »
+		data="player.swf?file=movie.mp4">
+		<param name="movie" »
+		value="player.swf?file=movie.mp4">
+		<a href="movie.mp4">Download the movie</a>
+		</object>
+		</video>
+
+	<h1>Web forms 2.0</h1>
+	<p>Placholders</p>
+		<label for="hobbies">Your hobbies</label>
+		<input id="hobbies" name="hobbies" type="text" »
+		placeholder="Owl stretching">
+
+	<p>Autofocus</p>
+	<label for="status">What's happening?</label>
+	<input id="status" name="status" type="text" autofocus>
+
+	<p>Validation</p>
+		<label for="pass">Your password</label>
+		<input id="pass" name="pass" type="password" required>
+
+		<label for="zip">Phone number</label>
+		<input id="zip" name="zip" pattern="[\d]{5}(-[\d]{4})">
+
+	<p>Datalist</p>
+		<label for="homeworld">Your home planet</label>
+		<input type="text" name="homeworld" id="homeworld" list="planets">
+		<datalist id="planets">
+			<option value="Mercury">
+			<option value="Venus">
+			<option value="Earth">
+			<option value="Mars">
+			<option value="Jupiter">
+			<option value="Saturn">
+			<option value="Uranus">
+			<option value="Neptune">
+		</datalist>
+
+	<p>Slide with type="range"</p>
+		<label for="amount">How much?</label>
+		<input id="amount" name="amount" type="range">	
+
+	<p>Spinners with type = number</p>
+		<label for="amount">How much?</label>
+		<input id="amount" name="amount" type="number" »
+		min="5" max="20">
+
+	<p>Date and time (Not yet implemented in Firefox)</p>
+		<label for="dtstart">Start date</label>
+		<input id="dtstart" name="dtstart" type="date">
+
+	<h1>Extensibiliity</h1>
+	<p>mark</p>
+		<p>Search results for 'unicorn'</p>
+		<ol>
+		<li><a href="http://clearleft.com/">
+			Riding the UX <mark>unicorn</mark> across »
+			the rainbow of the web.
+		</a></li>
+		</ol>
+
+	<p>Meter</p>
+		<meter>9 out of 10 cats</meter>
+		<meter max="10">9 cats</meter>
+		<meter low="-273" high="100" min="12" max="30" »
+		optimum="21" value="25">
+		It's quite warm for this time of year.
+		</meter>
+
+	<p>Progress</p>
+		Your profile is <progress>60%</progress> complete.
+	<progress min="0" max="100" value="60"></progress>
+	<h1>Structure</h1>
+	<p></p>
+		<section>
+		 	<h1>DOM Scripting</h1>
+			<p>The book is aimed at designers »
+			rather than programmers.</p>
+			<p>By Jeremy Keith</p>
+		</section>
+<p>Header within section</p>
+	<section>
+		<header>
+		<h1>DOM Scripting</h1>
+		</header>
+		<p>The book is aimed at designers »
+		rather than programmers.</p>
+		<p>By Jeremy Keith</p>
+</section>	
+</body>
+</html>	
